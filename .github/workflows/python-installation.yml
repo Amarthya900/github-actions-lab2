@@ -6,12 +6,12 @@ jobs:
   build:
     strategy: 
        matrix: 
-       OS: [ubuntu-latest, macos-14, windows-latest]
-       py-versions: [3.10, 3.11, 3.12]
-  runs-on: ${{ matrix.OS }}
-  steps:
+         OS: [ubuntu-latest, macos-14, windows-latest]
+         py-versions: [3.10, 3.11, 3.12]
+    runs-on: ${{ matrix.OS }}
+    steps:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '${{ matrix.py-version }}
+        python-version: '${{ matrix.py-versions }}'
         
